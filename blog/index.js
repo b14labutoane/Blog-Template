@@ -2,6 +2,8 @@ const express = require('express')
 const path = require('path')
 const app = new express()
 const ejs = require('ejs')
+const moongose = require('mongose')
+mongoose.connect('mongodb://localhost/my_database')
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.listen(4000, ()=>{
